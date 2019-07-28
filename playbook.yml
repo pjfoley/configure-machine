@@ -1,0 +1,21 @@
+site:
+  title: Machine setup
+  url: https://docs.ifoley.id.au
+  start_page: machinesetup::overview.adoc
+content:
+  sources:
+  - url: .
+    branches: HEAD
+ui:
+  bundle:
+    url: ./ui/build/ui-bundle.zip
+
+# output:
+  # clean: true
+  # dir: ./public
+  # destinations:
+  # - provider: fs
+# runtime:
+  # cache_dir: ./.cache/antora
+  # fetch: true
+
