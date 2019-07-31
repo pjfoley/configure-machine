@@ -1,0 +1,75 @@
+= Machine Build
+
+== Laptop
+
+== Packages
+
+i3, i3blocks, i3status, i3lock, rofi, lightdm, suckless-tools, rxvt-unicode, x11-xserver-utils, xclip, nfs-common, sakura, compton, Conky, 
+
+== i3 Setup
+
+[source, bash]
+----
+include::example$wifi.sh[tag=packages]
+----
+
+
+=== Packages
+i3, slick-greeter, upower, rxvt-unicode, ranger, rofi, conky-all, i3blocks, i3lock, i3lock-fancy, i3status, xclip, x11-xserver-utils
+
+
+
+== Useful tools
+
+Setup docker apt source and install docker
+Setup Virtual Box source and install Virtualbox
+
+=== Packages
+
+p7zip, unzip, htop, git, jq, rsync, bash-completion, keychain, wget, curl, pciutils, lshw, numlockx, mediainfo, stow
+
+
+== Group Membership
+
+[source,bash]
+----
+usermod -a -G sudo, docker, power, audio, bluetooth, vboxusers, pulse
+----
+
+
+=== Packages
+sudo, 
+
+== Fonts needed
+
+The Microsoft font requires the contrib package source
+The Ubuntu fonts require access to the non-free package source
+
+=== Packages
+
+fonts-dejavu, fonts-freefont-ttf, fonts-liberation, ttf-mscorefonts-installer, fonts-ubuntu, fonts-elusive-icons, fonts-font-awesome, fonts-noto, fonts-inconsolata, fonts-roboto, xfonts-terminus
+
+== Sound
+
+=== Packages
+
+alsa-utils, alsa-oss, alsamixergui, pavucontrol, pulseaudio
+
+== Video
+
+=== Packages
+
+mpv
+
+== Bluetooth
+
+=== Packages
+
+bluetooth, pulseaudio-module-bluetooth
+
+
+== Install Chrome
+
+Ref: https://www.wikihow.com/Install-Google-Chrome-Using-Terminal-on-Linux
+
+sudo apt-get install libxss1 libappindicator3-1

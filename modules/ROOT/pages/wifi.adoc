@@ -1,0 +1,82 @@
+
+= Configure Wifi
+
+== Required packages
+
+[source, bash]
+----
+include::example$wifi.sh[tag=packages]
+----
+
+== Check hardware devices
+.How to detect your wireless device
+[#optional-id,cols="1,7",options="header"]
+|===
+|Command | Description
+
+|lsusb | List devices connected to the *USB* controller
+|lspci | List devices connected to the *PCI* bus
+|===
+
+
+== Wireless device name
+To determine your wireless device name use the *iw* command
+[source, bash]
+----
+> iw dev
+phy#0
+    Interface wlp2s0
+        ifindex 3
+        wdev 0x1
+        addr 3a:c9:39:0d:fc:1a
+        type managed
+        txpower 20.00 dBm
+----
+
+In this instance the device is named *wlp2s0*.
+
+To check the status of *wlp2s0* run the following command.
+[source, bash]
+----
+> sudo ip link show wlp2s0
+2: wlp2s0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc mq state UP mode DEFAULT group default qlen 1000
+    link/ether 70:54:d2:7c:23:10 brd ff:ff:ff:ff:ff:ff
+----
+
+== Configure systemd-networkd
+We will use systemd-networkd to manage the */etc/resolv.conf* file.
+
+First ensure that all network devices are in the down state.
+[source, bash]
+----
+include::example$wifi.sh[tag=linkdown]
+----
+
+=== Setup routing priority
+IMPORTANT: Change eth0 to your WIRED IFACE and wlp2s0 to your WIRELESS IFACE to setup routing priority.
+
+[source, bash]
+----
+include::example$wifi.sh[tag=routingpriority]
+----
+
+=== Configure WPA Supplicant
+[source, bash]
+----
+include::example$wifi.sh[tag=configurewpasupplicant]
+----
+
+Now add a WIFI network to enable wpa_supplicant to connect.
+
+usage: wpa_passphrase <ssid> [passphrase] >> /etc/wpa_supplicant/wpa_supplicant-<IFACE>.conf
+
+=== Enable and start resolved and networkd service
+[source, bash]
+----
+include::example$wifi.sh[tag=enablewpasrv]
+----
+
+
+== References
+. https://wiki.debian.org/WiFi/HowToUse#Command_Line
+. https://www.redpill-linpro.com/techblog/2016/08/17/systemd-network.html
