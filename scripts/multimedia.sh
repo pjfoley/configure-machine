@@ -26,7 +26,7 @@ packages+=("mpv") # video player based on MPlayer/mplayer2
 packages+=("youtube-dl") # downloader of videos from YouTube and other sites
 packages+=("ffmpeg") # Tools for transcoding, streaming and playing of multimedia files
 
-sudo apt-get upgrade "${packages[*]}"
+sudo apt-get upgrade ${packages[*]}
 # end::packages[]
 
 require systemctl

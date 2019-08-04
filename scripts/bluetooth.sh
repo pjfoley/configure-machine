@@ -17,7 +17,7 @@ declare -a packages
 packages+=("bluetooth") # Bluetooth support (metapackage)
 packages+=("pulseaudio-module-bluetooth") # Bluetooth module for PulseAudio sound server
 
-sudo apt-get upgrade "${packages[*]}"
+sudo apt-get upgrade ${packages[*]}
 # end::packages[]
 
 require systemctl

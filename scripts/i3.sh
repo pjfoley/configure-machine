@@ -31,7 +31,7 @@ packages+=("conky-all") # highly configurable system monitor (all features enabl
 packages+=("xclip") # command line interface to X selections
 packages+=("x11-xserver-utils") # X server utilities
 
-sudo apt-get upgrade "${packages[*]}"
+sudo apt-get upgrade ${packages[*]}
 # end::packages[]
 
 require systemctl

@@ -32,7 +32,7 @@ packages+=("stow") # Organizer for /usr/local software packages
 packages+=("vim-nox") # Vi IMproved - enhanced vi editor - with scripting languages support
 packages+=("neovim") # heavily refactored vim fork
 
-sudo apt-get upgrade "${packages[*]}"
+sudo apt-get upgrade ${packages[*]}
 # end::packages[]
 
 require systemctl

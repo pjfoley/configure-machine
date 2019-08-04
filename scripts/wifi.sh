@@ -20,7 +20,7 @@ packages+=("iw")            # tool for configuring Linux wireless devices
 packages+=("usbutils")      # Linux USB utilities
 packages+=("pciutils")      # Linux PCI Utilities
 packages+=("sudo")          # Provide limited super user privileges to specific users
-sudo apt-get upgrade "${packages[*]}"
+sudo apt-get upgrade ${packages[*]}
 # end::packages[]
 
 
