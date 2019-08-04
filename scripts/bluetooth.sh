@@ -10,6 +10,9 @@ shopt -s nullglob globstar
 
 require(){ hash "$@" || exit 127; }
 
+# tag::requiredcmds[]
+require sudo
+# end::requiredcmds[]
 
 # tag::packages[]
 unset packages
@@ -19,11 +22,5 @@ packages+=("pulseaudio-module-bluetooth") # Bluetooth module for PulseAudio soun
 
 sudo apt-get upgrade ${packages[*]}
 # end::packages[]
-
-require systemctl
-require sudo
-
-
-
 
 exit 0

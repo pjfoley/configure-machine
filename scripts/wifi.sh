@@ -10,6 +10,14 @@ shopt -s nullglob globstar
 
 require(){ hash "$@" || exit 127; }
 
+# tag::requiredcmds[]
+require wpa_supplicant
+require systemctl
+require iw
+require lsusb
+require lspci
+require sudo
+# end::requiredcmds[]
 
 # tag::packages[]
 unset packages
@@ -22,15 +30,6 @@ packages+=("pciutils")      # Linux PCI Utilities
 packages+=("sudo")          # Provide limited super user privileges to specific users
 sudo apt-get upgrade ${packages[*]}
 # end::packages[]
-
-
-require wpa_supplicant
-require systemctl
-require iw
-require lsusb
-require lspci
-require sudo
-
 
 echo "Configure network links to down state"
 # tag::linkdown[]

@@ -10,11 +10,13 @@ shopt -s nullglob globstar
 
 require(){ hash "$@" || exit 127; }
 
+# tag::requiredcmds[]
+require sudo
+# end::requiredcmds[]
 
 # tag::packages[]
 unset packages
 declare -a packages
-
 
 packages+=("alsa-utils") # Utilities for configuring and using ALSA
 packages+=("alsa-oss") # ALSA wrapper for OSS applications
@@ -28,11 +30,5 @@ packages+=("ffmpeg") # Tools for transcoding, streaming and playing of multimedi
 
 sudo apt-get upgrade ${packages[*]}
 # end::packages[]
-
-require systemctl
-require sudo
-
-
-
 
 exit 0
