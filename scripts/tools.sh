@@ -31,6 +31,7 @@ packages+=("mediainfo") # command-line utility for reading information from audi
 packages+=("stow") # Organizer for /usr/local software packages
 packages+=("vim-nox") # Vi IMproved - enhanced vi editor - with scripting languages support
 packages+=("neovim") # heavily refactored vim fork
+packages+=("fzf") # general-purpose command-line fuzzy finder 
 
 sudo apt-get upgrade ${packages[*]}
 # end::packages[]
