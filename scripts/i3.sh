@@ -33,6 +33,8 @@ packages+=("rofi") # window switcher, run dialog and dmenu replacement
 packages+=("conky-all") # highly configurable system monitor (all features enabled)
 packages+=("xclip") # command line interface to X selections
 packages+=("x11-xserver-utils") # X server utilities
+packages+=("dunst") # Dunst is a highly configurable and lightweight notification-daemon
+packages+=("libnotify-bin") # sends desktop notifications to a notification daemon
 
 sudo apt-get upgrade ${packages[*]}
 # end::packages[]

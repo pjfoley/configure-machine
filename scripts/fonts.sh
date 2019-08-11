@@ -29,6 +29,7 @@ packages+=("fonts-noto") # metapackage to pull in all Noto fonts
 packages+=("fonts-inconsolata") # monospace font for pretty code listings and for the terminal
 packages+=("fonts-roboto") # metapackage to pull in Roboto fonts
 packages+=("xfonts-terminus") # Fixed-width fonts for fast reading 
+packages+=("fonts-materialdesignicons-webfont") # font containing Material Design Icons
 
 sudo apt-get upgrade ${packages[*]}
 # end::packages[]
