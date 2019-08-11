@@ -1,3 +1,5 @@
 name: machinesetup
 title: overview
 version: 'latest'
+nav:
+  - modules/ROOT/nav.adoc

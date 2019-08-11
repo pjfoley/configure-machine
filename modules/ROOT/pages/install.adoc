@@ -1,5 +1,15 @@
 = Machine Build
 
+After installing the base Operating System loging as *root*.
+
+.Get machine build scripts
+[source, bash]
+----
+
+mkdir ~/tmp && cd ~/tmp
+git clone https://github.com/{username}/{repository} machine-configure && cd machine-configure
+----
+
 == Laptop
 
 == Packages
