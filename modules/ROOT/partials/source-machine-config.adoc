@@ -1,0 +1,19 @@
+== Get machine build scripts
+To begin please download the configure machine scripts.
+
+.Substitutions
+[#optional-id,cols="1,7",options="header"]
+|===
+|Variable | Description
+
+|\{username\} | Replace with your github account name.
+|\{repository\} | Replace with your machine configuration repository.
+|===
+
+.Get machine build scripts
+[source, bash]
+----
+
+mkdir ~/tmp && cd ~/tmp
+git clone https://github.com/{username}/{repository} configure-machine && cd configure-machine
+----

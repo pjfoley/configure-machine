@@ -1,0 +1,25 @@
+== Debian package useful commands
+
+.To check a packages dependancies:
+[source,bash]
+----
+apt-cache depends {packagename}
+----
+
+.To show package details:
+[source,bash]
+----
+apt-cache show {packagename}
+----
+
+.To check a packages changelog:
+[source,bash]
+----
+apt-cache changelog {packagename}
+----
+
+.To list a packages files:
+[source,bash]
+----
+dpkg -L {packagename}
+----

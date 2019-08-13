@@ -1,0 +1,4 @@
+.Configure your machine
+* xref:install.adoc[Overview]
+* xref:bluetooth.adoc[Bluetooth]
+* xref:wifi.adoc[Wifi]

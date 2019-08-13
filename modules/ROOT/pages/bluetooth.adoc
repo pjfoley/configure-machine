@@ -1,0 +1,21 @@
+= Bluetooth
+:script-name: bluetooth.sh
+
+
+After installing the base Operating System loging as *root*.
+
+include::partial$source-machine-config.adoc[]
+
+[source,bash]
+----
+usermod -a -G bluetooth {username}
+----
+
+== Required packages
+
+[source, bash]
+----
+include::example${script-name}[tag=packages]
+----
+
+include::partial$apt-useful-commands.adoc[]
