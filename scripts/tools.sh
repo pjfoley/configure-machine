@@ -35,6 +35,8 @@ packages+=("stow") # Organizer for /usr/local software packages
 packages+=("vim-nox") # Vi IMproved - enhanced vi editor - with scripting languages support
 packages+=("neovim") # heavily refactored vim fork
 packages+=("fzf") # general-purpose command-line fuzzy finder 
+packages+=("xsel") # command-line tool to access X clipboard and selection buffers
+packages+=("xclip") # command line interface to X selections
 
 sudo apt-get upgrade ${packages[*]}
 # end::packages[]
