@@ -30,6 +30,7 @@ packages+=("fonts-inconsolata") # monospace font for pretty code listings and fo
 packages+=("fonts-roboto") # metapackage to pull in Roboto fonts
 packages+=("xfonts-terminus") # Fixed-width fonts for fast reading 
 packages+=("fonts-materialdesignicons-webfont") # font containing Material Design Icons
+packages+=("fonts-powerline") # prompt and statusline utility (symbols font) 
 
 sudo apt-get upgrade ${packages[*]}
 # end::packages[]
